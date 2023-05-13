@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+    color: #9E9E9E;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+/*parte superior del nav*/
+.material-symbols-outlined {/*icono home*/
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 48
+}
+main{
+    display: flex;
+    column-gap: 6px;
+}
+.left_side_D{
+    box-sizing: border-box;
+    width: 30%;
+    height: 85vh; 
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.side_navigation_D{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+.side_navigation_D .small_D{
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    justify-content: center;
+    row-gap: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+    border-radius: 8px;
+    height: 25%;
+}
+.side_navigation_D .small_D .incio-buscar{
+    display: flex;
+    column-gap: 15px;
+}
+.side_navigation_D .small_D a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.side_navigation_D .small_D a .text-a{/*posocionar el texto del link*/
+    position: relative;
+    left: 20px;
+    top: -4px;
+}
+/*parte superior del nav*/
+
+/*parte inferior del nav*/
+.side_navigation_D .big_D{
+    background-color: #121212;
+    height: 75%;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+.side_navigation_D .big_D .library{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    height: 14%;
+}
+.side_navigation_D .big_D .library a{
+    text-decoration: none;
+    color: white;
+}
+.btn_lib{
+    cursor: pointer;
+    color: #B6B6B6;
+    border: none; /*si no defino el border, no funciona background transparent*/
+    background-color: transparent;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+.side_navigation_D .big_D .btn_sect{
+    display: flex;
+    column-gap: 10px;
+    justify-content: flex-start;
+    height: 8%;
+}
+.side_navigation_D .big_D a .text-a{/*posocionar el texto del link*/
+    position: relative;
+    left: 18px;
+    top: -4px;
+}
+.side_navigation_D .big_D .btn_sect button{
+    border-radius: 20px;
+    width: 70px;
+    height: 27px;
+    background-color: #2A2A2A;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+.side_navigation_D .big_D .cont_playlist{
+    height: 100%;
+}
+.side_navigation_D .big_D .buscador{
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+}
+.side_navigation_D .big_D .buscador button{
+    cursor: pointer;
+    color: #B6B6B6;
+    border: none; /*si no defino el border, no funciona background transparent*/
+    background-color: transparent;
+}
+.side_navigation_D .big_D .buscador button .material-symbols-outlined {
+    font-size: 20px;  
+}
+.side_navigation_D .big_D .buscador .sectiondos_btnuno .material-symbols-outlined{
+    position: relative;
+    top: 6px;
+}
+/*.side_navigation_D .big_D .cont_buscador .miniatura_aside{
+   
+    
+}*/
+.side_navigation_D .big_D .cont_buscador .cont_cancion{
+    position: relative;
+    top: 15px;
+    height: 70px;
+}
+.side_navigation_D .big_D .cont_buscador img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+.side_navigation_D .big_D .cont_det{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: 63%; /*(calcule valor al ojo)se debe especificar para que funcione overflow*/
+    overflow-y: auto;
+}
+.side_navigation_D .big_D .cont_det::-webkit-scrollbar{
+    background-color:#121212;
+    border-radius: 20px;
+    width: 14px;
+}
+.side_navigation_D .big_D .cont_det::-webkit-scrollbar-thumb{
+    background-color: #2A2A2A;
+    border-radius: 10px;
+}
+.side_navigation_D .big_D .cont_buscador{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    
+}
+/*parte inferior del nav*/
+
+/*hovers del nav bar*/
+.side_navigation_D .small_D a:hover{
+    color: #9E9E9E;
+}
+.side_navigation_D .big_D a:hover{
+    color: #9E9E9E;
+}
+.side_navigation_D .big_D .library button:hover{
+    color: #9E9E9E;
+    border-radius: 50%;
+    background-color:#2A2A2A;
+}
+.side_navigation_D .big_D .btn_sect button:hover{
+    background-color: #696969;
+}
+.side_navigation_D .big_D .buscador button:hover{
+    color: #9E9E9E;
+}
+.side_navigation_D .big_D .buscador button.busq:hover{
+    color: #363636;
+}
+.side_navigation_D .big_D .cont_buscador:hover{
+    background-color: #2A2A2A;
+    border-radius: 6px;
+}
+/*hovers del nav bar*/
+
+
+.rigth_side_D{
+    box-sizing: border-box;
+    width: 70%;
+    height: 85vh;
+    padding: 10px 20px 0px 10px;
+    border-radius: 8px;
+}
+
