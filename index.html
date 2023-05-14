@@ -37,8 +37,15 @@
                     </div>
                     <div class="cont_playlist">
                         <div class="buscador">
-                            <button class="sectiondos_btn busq"><span class="material-symbols-outlined">Search</span></button>
-                            <button class="sectiondos_btnuno">recientes<span class="material-symbols-outlined">arrow_drop_down</span></button>
+                            <div>
+                            <button onclick="showInput()"class="sectiondos_btn busq"><span class="material-symbols-outlined">Search</span></button><!--js onclic para mostrar input type text-->
+                            </div>
+                            <div>
+                            <input id="inputbox" type="text" placeholder="Buscar en tu Biblioteca">
+                            </div>
+                            <div>
+                            <button class="sectiondos_btnuno">Recientes<span class="material-symbols-outlined">arrow_drop_down</span></button>
+                            </div>
                         </div>
                         <div class="cont_det">
                             <div class="cont_buscador">
@@ -153,6 +160,6 @@
 
 
     
-    
+   <script src="app.js"></script> 
 </body>
 </html>
