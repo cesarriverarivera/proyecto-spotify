@@ -6,11 +6,11 @@
 body{
     background-color: #000000;
     color: #9E9E9E;
-    font-family: 'Roboto Slab', serif;
+    font-family: roboto system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
 }
 /*parte superior del nav*/
-.material-symbols-outlined {/*icono home*/
+.material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
@@ -44,7 +44,7 @@ main{
     padding-left: 20px;
     padding-right: 15px;
     border-radius: 8px;
-    height: 25%;
+    height: 22%;
 }
 .side_navigation_D .small_D .incio-buscar{
     display: flex;
@@ -66,7 +66,7 @@ main{
 /*parte inferior del nav*/
 .side_navigation_D .big_D{
     background-color: #121212;
-    height: 75%;
+    height: 78%;
     border-radius: 8px;
     padding-left: 20px;
     padding-right: 15px;
@@ -167,16 +167,12 @@ main{
     background-color: transparent;
 }
 .side_navigation_D .big_D .buscador button .material-symbols-outlined {
-    font-size: 20px;  
+    font-size: 20px;
 }
 .side_navigation_D .big_D .buscador .sectiondos_btnuno .material-symbols-outlined{
     position: relative;
     top: 6px;
 }
-/*.side_navigation_D .big_D .cont_buscador .miniatura_aside{
-   
-    
-}*/
 .side_navigation_D .big_D .cont_buscador{
     box-sizing: border-box;
     margin-right: 5px;
@@ -244,12 +240,506 @@ main{
 }
 /*hovers del nav bar*/
 
+/*Lado derecho de la app*/
+
+
 
 .rigth_side_D{
     box-sizing: border-box;
     width: 70%;
     height: 85vh;
-    padding: 10px 20px 0px 10px;
+    padding:10px 15px 0px 0px;
+}
+.all_d{
+    background-image: linear-gradient(#490b02 2%,#121212 60%);
+    width: 100%;
+    height:100%;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+.all_d::-webkit-scrollbar{
+    background-color:#12121200;
+    border-radius: 20px;
+    width: 14px;
+}
+.all_d::-webkit-scrollbar-thumb{
+    background-color: #2A2A2A;
+    border-radius: 10px;
+}
+
+/*barra superior estatica*/
+.static_nav{
+    position:sticky;
+    top: 0;
+    background-color:#490b02 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:12%;
+}
+
+.static_nav .btn_izq{
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.static_nav .btn_izq button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 30px;
+    border: none;
+    background-color: #181718;
+    color: white; 
+}
+.static_nav .btn_der{
+    display: flex;
+    width: 170px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.static_nav .btn_der .img-perfil button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:#121212;border: none;
+}
+.static_nav .btn_der img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none; 
+}
+.static_nav .btn_der .inst-btn{
+    position: relative;
+    left: -8px;
+    display: flex;
+    background-color:#1D0602;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+}
+.static_nav .btn_der .inst-app{
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*barra superior estatica*/
+
+
+/*Buenas tardes*/
+.b_tardes{
+    height: 10%;   
+}
+.b_tardes h2{
+    font-size: 1.8rem;
+    color: white;
+}
+.buenas_tardes{
+    width: 100%;
+    height: 35%;
+}
+.buenas_tardes .content_dere{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.buenas_tardes .content_dere .tarjeta_musica{
+    display: flex;
+    align-items: center;
+    background-color: #3b39399f;
+    width: 32%;
+    border-radius: 5px;
+    border: none;
+    height: 43%;
+    transition: all 900ms ease;
+}
+.buenas_tardes .content_dere .tarjeta_musica .img_tarje{
+    width: 100px;
+    height: 100%;
+}
+.buenas_tardes .content_dere .tarjeta_musica img{
+    width: 80px;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+}
+.buenas_tardes .content_dere .tarjeta_musica .title_p{
+    width: 45%;
+}
+.buenas_tardes .content_dere .tarjeta_musica p{
+    font-size: 1rem;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.buenas_tardes .content_dere .tarjeta_musica button{
+    display: none;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1FDF64;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/*Buenas tardes*/
+
+/*tarjetas block*/
+.title_cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 15%;
+    padding-bottom: 10px;
+}
+.title_cont h2 a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    
+}
+.title_cont .show_all{
+    text-decoration: none;
+    color:#9E9E9E;
+    font-size: 14px;
+    font-weight: bolder;
+   
+}
+.tarjeta_block{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.tarjeta_block .tarjeta_musica_block{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color:#181718;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+}
+.tarjeta_block .mix_img{
+    box-sizing: border-box;
+    padding-top: 10px;
+    display: flex;
+    align-self: center; 
+}
+.tarjeta_block img{
+    width: 175px;
+    height: 100%;
+    border-radius: 10px;
+}
+.tarjeta_block h3,
+.tarjeta_block p{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.tarjeta_block h3{
+    color: white;
+    font-weight: 400;
+}
+.tarjeta_block p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tarjeta_block  a,
+.tarjeta_block span{
+    text-decoration: none;
+    color:#9E9E9E;
+}
+.tarjeta_block button{
+    display: none;
+    position: relative;
+    top: -140px;
+    left: 140px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1FDF64;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/*tarjetas block*/
+
+/*hovers lado derecho*/
+/*hovers barra superior y buenas tardes*/
+.buenas_tardes .content_dere .tarjeta_musica:hover .btnhover{
+    display: block;
+}
+.buenas_tardes .content_dere .tarjeta_musica:hover{
+    background-color: #524f4f;
+    cursor: pointer;
+}
+.static_nav .btn_der .inst-btn:hover{
+    transform: scale(1.05);
+}
+.static_nav .btn_der .img-perfil button:hover{
+    transform: scale(1.05);
+}
+.static_nav .btn_izq button:hover{
+    background-color:#1D0602;
+    cursor: pointer;
+}
+/*hovers barra superior y buenas tardes*/
+/*hovers de tarjetas block*/
+.tarjeta_block .tarjeta_musica_block:hover .btnhover{
+    display: block; 
+}
+.tarjeta_block .tarjeta_musica_block:hover{
+    background-color: #3a3838;
+    cursor: pointer;
+}
+.title_cont h2 a:hover,
+.title_cont .show_all:hover,
+.tarjeta_block p a:hover{
+    text-decoration: underline;
+}
+/*hovers de tarjetas block*/
+
+/*hovers lado derecho*/
+/*Lado derecho de la app*/
+
+
+/*lado del reproductor*/
+.reproductor{
+    box-sizing: border-box;
+    position: absolute;
+    top: 85vh;
+    padding-left: 10px;
+    padding-right: 20px;
+    display: flex;
+    width: 100%;
+    height: 15vh;
+}
+
+/*lado izquerdo reproductor*/
+.reproductor .left{
+    display: flex;
+    width: 22%; 
+    column-gap: 10px;
+}
+.reproductor .left .img_rep{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 15vh;
+}
+.reproductor .left img{
+    width: 70px;
+    height: 11vh;
     border-radius: 8px;
 }
+.reproductor .left .content_rep{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 15vh;
+}
+.reproductor .left .content_rep a{
+    text-decoration: none;
+    color: white;
+}
+.reproductor .left .btn_rep .material-symbols-outlined{
+    font-variation-settings:
+  'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 48 
+}
+.reproductor .left .btn_rep{
+    display: flex;
+    align-items: center;
+}
+.reproductor .left .btn_repdos{
+    display: flex;
+    align-items: center;
+}
+.reproductor .left .btn_rep button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.reproductor .left .btn_repdos .material-symbols-outlined{
+    font-variation-settings:
+  'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 48
+}
+.reproductor .left .btn_repdos button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+/*lado izquerdo reproductor*/
+
+/*lado centro reproductor*/
+.reproductor .center{
+    width: 56%;
+}
+.reproductor .center .up{
+    position: relative;
+    top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    height: 50%;
+}
+.reproductor .center .up .btn_shuffle button,
+.reproductor .center .up .btn_rpt button{
+    background-color: transparent;
+    border: none;
+    color:#9E9E9E;
+    font-size: 22px;
+}
+.reproductor .center .up .btn_play_pause button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+}
+.reproductor .center .up .btn_prev button,
+.reproductor .center .up .btn_next button{
+    background-color: transparent;
+    border: none;
+    color:#9E9E9E;
+    font-size:35px;
+}
+.reproductor .center .up .btn_shuffle .material-symbols-outlined,
+.reproductor .center .up .btn_rpt .material-symbols-outlined{
+    font-variation-settings:
+  'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 48
+}
+.reproductor .center .up .btn_prev .material-symbols-outlined,
+.reproductor .center .up .btn_next .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 1, 'wght' 300, 'GRAD' 200, 'opsz' 48
+}
+.reproductor .center .up .btn_play_pause .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 1, 'wght' 400, 'GRAD' 200, 'opsz' 48
+}
+.reproductor .center .down{
+    position: relative;
+    top: 12px;
+    display: flex;
+    column-gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.reproductor .center .down time{
+    font-size: 12px;
+}
+.reproductor .center .down .time_rep{
+    width: 450px;
+    height: 4px;
+    background-color:#3a3838;
+    border-radius: 8px;
+}
+.reproductor .center .down .time_rep .cover_time_rep{
+    width: 10px;
+    height: 4px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/*lado centro reproductor*/
+
+/*lado derecho reproductor*/
+.reproductor .rigth{
+    width: 22%;
+    height: 15vh;
+}
+.reproductor .rigth .content_r_rep{
+    display: flex;
+    column-gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15vh;
+
+}
+.reproductor .rigth .content_r_rep .volume{
+    width: 90px;
+    height: 4px;
+    background-color:#3a3838 ;
+    border-radius: 8px;
+}
+.reproductor .rigth .content_r_rep .mic .material-symbols-outlined,
+.reproductor .rigth .content_r_rep .queue .material-symbols-outlined,
+.reproductor .rigth .content_r_rep .speaker .material-symbols-outlined,
+.reproductor .rigth .content_r_rep .cal_vol .material-symbols-outlined,
+.reproductor .rigth .content_r_rep .expand .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0, 'wght' 300, 'GRAD' 200, 'opsz' 48
+}
+.reproductor .rigth .content_r_rep .mic button,
+.reproductor .rigth .content_r_rep .queue button,
+.reproductor .rigth .content_r_rep .speaker button,
+.reproductor .rigth .content_r_rep .cal_vol button,
+.reproductor .rigth .content_r_rep .expand button{
+    background-color: transparent;
+    border: none;
+    color:#9E9E9E;
+    font-size:20px;
+}
+.reproductor .rigth .content_r_rep .volume .cover_volume{
+    width: 15px;
+    height: 4px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/*lado derecho reproductor*/
+
+/*hovers reproductor lado izquierdo*/
+.reproductor .left a:hover{
+    text-decoration: underline;
+}
+.reproductor .left button:hover{
+    cursor: pointer;
+    color: #696969;
+}
+/*hovers reproductor lado izquierdo*/
+/*hovers reproductor lado centro*/
+.reproductor .center .up .btn_play_pause button:hover{
+    transform: scale(1.1);
+}
+.reproductor .center .up .btn_prev button:hover,
+.reproductor .center .up .btn_next button:hover,
+.reproductor .center .up .btn_rpt button:hover,
+.reproductor .center .up .btn_shuffle button:hover{
+    color: white;
+}
+/*hovers reproductor lado centro*/
+/*hovers reproductor lado derecho*/
+.reproductor .rigth .content_r_rep button:hover{
+    color: white;
+}
+
+/*hovers reproductor lado derecho*/
+
+/*lado del reproductor*/
 
