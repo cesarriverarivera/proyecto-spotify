@@ -21,9 +21,12 @@ main{
     display: flex;
     column-gap: 6px;
 }
+.left_side_tablet{
+    display: none;
+}
 .left_side_D{
     box-sizing: border-box;
-    min-width: 400px;
+    width: 30%;
     height: 85vh; 
     padding-left: 10px;
     padding-top: 10px;
@@ -250,35 +253,43 @@ main{
     height: 85vh;
     padding:10px 15px 0px 0px;
 }
-.all_d{
+.rigth_side_D .overflow{
     background-image: linear-gradient(#490b02 2%,#121212 60%);
+    overflow-y: auto;
     width: 100%;
-    height:100%;
+    height: 100%;
     border-radius: 8px;
+}
+.all_d{
+    width: 100%; 
     padding-left: 20px;
     padding-right: 20px;
-    overflow-y: auto;
+    height: 100%;
 }
 
-.all_d::-webkit-scrollbar{
+.rigth_side_D .overflow::-webkit-scrollbar{
     background-color:#12121200;
     border-radius: 20px;
     width: 14px;
 }
-.all_d::-webkit-scrollbar-thumb{
+.rigth_side_D .overflow::-webkit-scrollbar-thumb{
     background-color: #2A2A2A;
     border-radius: 10px;
 }
 
 /*barra superior estatica*/
 .static_nav{
+    box-sizing: border-box;
     position:sticky;
     top: 0;
-    background-color:#490b02 ;
+    /*background-color:#490b02 */
     display: flex;
     justify-content: space-between;
     align-items: center;
     height:12%;
+    width: 100%; 
+    padding-left: 20px;
+    padding-right: 20px;   
 }
 
 .static_nav .btn_izq{
@@ -287,6 +298,7 @@ main{
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    
 }
 .static_nav .btn_izq button{
     width: 35px;
@@ -303,9 +315,7 @@ main{
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    
 }
-
 .static_nav .btn_der .img-perfil button{
     display: flex;
     justify-content: center;
@@ -343,7 +353,9 @@ main{
 
 /*Buenas tardes*/
 .b_tardes{
-    height: 10%;   
+    padding-top: 10px;
+    height: 10%;
+    padding-bottom: 10px;   
 }
 .b_tardes h2{
     font-size: 1.8rem;
@@ -376,7 +388,7 @@ main{
     height: 100%;
 }
 .buenas_tardes .content_dere .tarjeta_musica img{
-    width: 80px;
+    width: 80%;
     height: 100%;
     border: none;
     border-radius: 5px;
@@ -427,8 +439,7 @@ main{
 }
 .tarjeta_block{
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 .tarjeta_block .tarjeta_musica_block{
     box-sizing: border-box;
@@ -436,32 +447,46 @@ main{
     flex-direction: column;
     background-color:#181718;
     border-radius: 10px;
-    width: 200px;
+    width: 23%;
     height: 300px;
 }
 .tarjeta_block .mix_img{
     box-sizing: border-box;
     padding-top: 10px;
     display: flex;
-    align-self: center; 
+    justify-content: center;
+    height: 60%;
 }
 .tarjeta_block img{
-    width: 175px;
+    width: 93%;
     height: 100%;
     border-radius: 10px;
 }
-.tarjeta_block h3,
-.tarjeta_block p{
-    padding-top: 15px;
-    padding-left: 15px;
+.tarjeta_block .encab_tarjeta{
+    height: 10%;
 }
+.tarjeta_block .content_tarjeta{
+    height: 30%;
+    padding-bottom: 10px;
+}
+.tarjeta_block .btn_tarjeta{
+    height: 0%;
+}
+
 .tarjeta_block h3{
     color: white;
     font-weight: 400;
+    padding-top: 10px;
+    padding-left: 15px;
+    
 }
 .tarjeta_block p{
+    padding-top: 15px;
+    padding-left: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 100%;
+    width: 100%;
 }
 .tarjeta_block  a,
 .tarjeta_block span{
@@ -553,6 +578,21 @@ main{
     width: 70px;
     height: 11vh;
     border-radius: 8px;
+}
+#expand_music{
+    display: none;
+    position:absolute;
+    left: 55px;
+    top: 23px;
+    background-color:#12121265;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 25px;
+}
+.reproductor .left button .material-symbols-outlined{
+    font-variation-settings:
+  'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 48 
 }
 .reproductor .left .content_rep{
     display: flex;
@@ -722,6 +762,10 @@ main{
     cursor: pointer;
     color: #696969;
 }
+.reproductor .left .expand:hover{
+    color: white;
+    transform: scale(1.2);
+}
 /*hovers reproductor lado izquierdo*/
 /*hovers reproductor lado centro*/
 .reproductor .center .up .btn_play_pause button:hover{
@@ -743,3 +787,160 @@ main{
 
 /*lado del reproductor*/
 
+/*responsive */
+@media screen and (max-width: 1175px){
+    .big_D .cont_playlist .buscador .sectiondos_btnuno{
+       display: none;
+    }
+    .tarjeta_block .tarjeta_musica_block:hover .btnhover{
+        display: none;
+    }
+    .buenas_tardes .content_dere .tarjeta_musica:hover .btnhover{
+        display: none;
+    }
+    .buenas_tardes .content_dere .tarjeta_musica p{
+        font-size: 0.8rem; 
+    }
+    .tarjeta_block h3,
+    .tarjeta_block p{
+        font-size: 0.8rem;
+    }
+    .tarjeta_block .tarjeta_musica_block{
+        height: 250px;
+    }
+}
+
+/*Tablet media*/
+@media screen and (max-width: 945px){
+    .left_side_D{
+        display: none;
+    }
+    .reproductor{
+        display: none;
+    }
+    .left_side_tablet{
+        box-sizing: border-box;
+        display: block;
+        min-width: 20%;
+        height: 98vh;  
+    }
+    .left_side_tablet{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0px 0px 10px;
+    }
+    .rigth_side_D{
+        width: 85%;
+        height: 98vh;
+    }
+    .left_side_tablet .content_tablet{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 98vh;
+        background-color:#121212; 
+        border-radius: 8px; 
+    }
+    .left_side_tablet .side_tablet{
+        box-sizing: border-box;
+        display: flex;
+        padding-left: 10px;
+        padding-top: 10px;
+        
+    }
+    .left_side_tablet .side_tablet .menu_tablet{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+    }  
+    .left_side_tablet .side_tablet .menu_tablet .icon_m{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+    .left_side_tablet .side_tablet .menu_tablet a,
+    .left_side_tablet .side_tablet .menu_tablet span{
+        text-decoration: none;
+        color: white;
+    }
+    .reproductor_tablet .content_rep_tablet{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        height: 100%;
+        padding-bottom: 30px;
+    }
+    .reproductor_tablet .content_rep_tablet .img_rep_tablet{
+        display: flex;
+        justify-content: center;
+    }
+    .reproductor_tablet .content_rep_tablet img{
+        width: 90%;
+    }
+    .reproductor_tablet .content_rep_tablet .cont_cancion_tablet{
+        display: flex;
+        justify-content: space-between; 
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        align-items: center;
+    }
+
+    .reproductor_tablet .content_rep_tablet .cont_cancion_tablet .nombre_autor{
+        display: flex;
+        flex-direction: column;
+    }
+    .reproductor_tablet .content_rep_tablet .cont_cancion_tablet .nombre_autor a{
+        text-decoration: none;
+        color:white;
+    }
+    .reproductor_tablet .content_rep_tablet .cont_cancion_tablet button{
+        background-color: transparent;
+        border: none;
+        color:white;
+        font-size: 22px;
+    }
+    .btn_fav .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 48  
+    }
+    .reproductor_tablet .content_rep_tablet .linea_rep_tablet{
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;    
+    }
+    .linea_rep_tablet .linea_gen{
+        width: 160px;
+        height: 3px;
+        background-color:#524f4f;
+        border-radius: 8px;
+    }
+    .linea_rep_tablet .linea_gen .content_linea{
+        width: 40px;
+        height: 3px;
+        background-color:white;
+        border-radius: 8px;
+    }
+    .btn_rep_tablet{
+        padding-top: 15px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        column-gap: 10px;
+    }
+    .btn_rep_tablet button{
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 35px;
+    }
+    .btn_rep_tablet button:nth-child(2){
+        font-size: 50px;
+    }
+}   
+/* END Tablet media*/
+/*responsive */

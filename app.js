@@ -32,4 +32,15 @@ document.querySelectorAll(".tarjeta_musica").forEach(item => {
     
   })    
   /*codigo for each para recorrer cada elemento dentro de tarjeta_musica */
+ 
+/* codigo para barra inferior al hacer hover sobre la miniatura de portada de cancion se muestre boton para expansion*/
+let imghover = document.getElementById("img_small")
+let btnexpand = document.getElementById("expand_music")
+
+  imghover.addEventListener("mouseover",() => document.getElementById("expand_music").style.display = "block")
+  btnexpand.addEventListener("mouseover",() => document.getElementById("expand_music").style.display = "block")
+  imghover.addEventListener("mouseout",()=> document.getElementById("expand_music").style.display = "none")
+/* codigo para barra inferior al hacer hover sobre la miniatura de portada de cancion se muestre boton para expansion*/
+
+
   
