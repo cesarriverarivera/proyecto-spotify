@@ -18,7 +18,6 @@ body{
   'opsz' 48
 }
 main{
-    height: calc(var(--vh, 1vh) * 100);
     display: flex;
     column-gap: 6px;
 }
@@ -823,7 +822,7 @@ main{
         box-sizing: border-box;
         display: block;
         width: 25%;
-        height: 98vh;  
+        height: calc(100vh - 60px)  
     }
     .left_side_tablet{
         display: flex;
@@ -833,7 +832,7 @@ main{
     }
     .rigth_side_D{
         width: 75%;
-        height: 98vh;   
+        height: calc(100vh - 60px)   
     }
     .left_side_tablet .content_tablet{
         box-sizing: border-box;
