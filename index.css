@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    display: block;
     overflow: hidden;
     background-color: #000000;
     color: #9E9E9E;
@@ -18,9 +17,6 @@ body{
   'wght' 400,
   'GRAD' 200,
   'opsz' 48
-}
-main{
-    display: block;
 }
 .cuerpo{
     display: flex;
@@ -889,7 +885,7 @@ main{
         flex-direction: column; 
         align-items: center;
         height: 100%;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
     }
     .reproductor_tablet .content_rep_tablet .img_rep_tablet{
         display: flex;
