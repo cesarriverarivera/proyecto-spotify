@@ -828,7 +828,7 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 10px 0px 0px 10px;
+        padding: 10px 0px 0px 10px;  
     }
     .rigth_side_D{
         width: 85%;
@@ -847,32 +847,44 @@ main{
     .left_side_tablet .side_tablet{
         box-sizing: border-box;
         display: flex;
-        padding-left: 10px;
-        padding-top: 10px;
-        
+        padding-left: 0px;
+        padding-top: 10px;  
     }
     .left_side_tablet .side_tablet .menu_tablet{
         display: flex;
         flex-direction: column;
         row-gap: 10px;
-
     }  
+    #g_s_inicio{
+        width: 3px;
+        height: 100%;
+        background-color: #1FDF64;  
+    }
+    #g_s_buscar, #g_s_biblioteca{
+        width: 3px;
+        height: 100%;
+        background-color: #1FDF64;
+        visibility: hidden;
+    }
     .left_side_tablet .side_tablet .menu_tablet .icon_m{
         display: flex;
         align-items: center;
-        column-gap: 10px;
+        column-gap: 6px;
     }
     .left_side_tablet .side_tablet .menu_tablet a,
     .left_side_tablet .side_tablet .menu_tablet span{
         text-decoration: none;
         color: white;
     }
+    .reproductor_tablet{
+        display: flex;
+    }
     .reproductor_tablet .content_rep_tablet{
         display: flex;
         flex-direction: column; 
         align-items: center;
         height: 100%;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
     }
     .reproductor_tablet .content_rep_tablet .img_rep_tablet{
         display: flex;
@@ -889,7 +901,6 @@ main{
         padding-right: 10px;
         align-items: center;
     }
-
     .reproductor_tablet .content_rep_tablet .cont_cancion_tablet .nombre_autor{
         display: flex;
         flex-direction: column;
@@ -911,16 +922,19 @@ main{
     .reproductor_tablet .content_rep_tablet .linea_rep_tablet{
         display: flex;
         justify-content: center;
-        padding-top: 10px;    
+        padding-top: 10px;  
+        width: 100%; 
+        padding-left: 5px;
+        padding-right: 5px; 
     }
     .linea_rep_tablet .linea_gen{
-        width: 160px;
+        width: 100%;
         height: 3px;
         background-color:#524f4f;
         border-radius: 8px;
     }
     .linea_rep_tablet .linea_gen .content_linea{
-        width: 40px;
+        width: 10%;
         height: 3px;
         background-color:white;
         border-radius: 8px;
@@ -936,11 +950,66 @@ main{
         background-color: transparent;
         border: none;
         color: white;
-        font-size: 35px;
+        font-size: 1.8rem;
     }
     .btn_rep_tablet button:nth-child(2){
-        font-size: 50px;
+        font-size: 3.5rem;
+    } 
+    .title_cont .show_all{
+        display: none;
     }
-}   
+    .reproductor_tablet .content_rep_tablet .disp_dispo{
+        display: flex;
+        column-gap: 5px;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+    }
+    .reproductor_tablet .content_rep_tablet .disp_dispo .btn_disp{
+        height: 100%;
+    }
+    .reproductor_tablet .content_rep_tablet .disp_dispo .disp_p{
+        height: 100%;
+    }
+    .reproductor_tablet .content_rep_tablet .disp_dispo button{
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        height: 100%;
+    }
+    .reproductor_tablet .content_rep_tablet .disp_dispo p{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 0.6rem; 
+        
+    }
+} 
+
+@media screen and (max-width: 945px) and (min-height: 1100px){
+    /*Modificicacion de porcentajes para altura en tablet*/
+    .static_nav{
+        height: 6%;
+    }
+    .b_tardes{
+        height: 5%;
+    }
+    .buenas_tardes{
+        height: 14%;
+    }
+    .buenas_tardes .content_dere .tarjeta_musica img{
+        width: 70%;
+    }
+    .title_cont{
+        height: 8%;
+    }
+    /* END Modificicacion de porcentajes para altura en tablet*/
+}
+ 
 /* END Tablet media*/
 /*responsive */

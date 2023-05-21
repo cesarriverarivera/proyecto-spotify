@@ -18,22 +18,25 @@
         <!--tablet nav-->
         <aside class="left_side_tablet">
             <div class="content_tablet">
-            <nav class="side_tablet">
-                    <div class="menu_tablet">
-                        <div class="icon_m">
-                            <a href="#"><span class="material-symbols-outlined">Home</span> </a>
-                            <span class="text-a"> Inicio</span>
+                <nav class="side_tablet">
+                        <div class="menu_tablet" id="menu_t">
+                            <div  onclick="show_greencardHome()" class="icon_m">
+                                <div class="green_selectedOn" id="g_s_inicio"></div>
+                                <a href="#"><span class="material-symbols-outlined">Home</span> </a>
+                                <span class="text-a"> Inicio</span>
+                            </div>
+                            <div onclick="show_greencardSearch()"  class="icon_m">
+                                <div class="green_selected" id="g_s_buscar"></div>
+                                <a href="#"><span class="material-symbols-outlined">Search</span></a>
+                                <span class="text-a"> Buscar</span>
+                            </div>
+                            <div onclick="show_greencardBibli()" class="icon_m">
+                                <div class="green_selected" id="g_s_biblioteca"></div>
+                                <a href="#"><span class="material-symbols-outlined">library_music</span> </a>
+                                <span class="text-a">Tu Biblioteca</span>
+                            </div>    
                         </div>
-                        <div class="icon_m">
-                            <a href="#"><span class="material-symbols-outlined">Search</span></a>
-                            <span class="text-a"> Buscar</span>
-                        </div>
-                        <div class="icon_m">
-                            <a href="#"><span class="material-symbols-outlined">library_music</span> </a>
-                            <span class="text-a">Tu Biblioteca</span>
-                        </div>    
-                    </div>
-            </nav>
+                </nav>
             <!-- END tablet nav-->
 
             <!--reproductor tablet-->
@@ -60,6 +63,14 @@
                         <button class="material-symbols-outlined">skip_previous</button>
                         <button class="material-symbols-outlined">pause_circle</button>
                         <button class="material-symbols-outlined">skip_next</button>
+                    </div>
+                    <div class="disp_dispo">
+                        <div class="btn_disp">
+                            <button class="material-symbols-outlined">speaker</button>
+                        </div>
+                        <div class="disp_p">
+                            <p>dispositivos disponibles</p>
+                        </div>
                     </div>
                 </div>
             </section>
