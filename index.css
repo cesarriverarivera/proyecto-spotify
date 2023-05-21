@@ -18,7 +18,7 @@ body{
   'GRAD' 200,
   'opsz' 48
 }
-.cuerpo{
+.main{
     display: flex;
     column-gap: 6px;
 }
