@@ -10,6 +10,7 @@ body{
     font-size: 14px;
     height: 100vh;
     height: 100svh;
+    overflow: hidden;
 }
 /*parte superior del nav*/
 .material-symbols-outlined {
@@ -25,6 +26,12 @@ main{
     height: 100svh;
 }
 .left_side_tablet{
+    display: none;
+}
+.rep_phone{
+    display: none;
+}
+.navegacion_phone{
     display: none;
 }
 .left_side_D{
@@ -274,6 +281,7 @@ main{
     background-color:#12121200;
     border-radius: 20px;
     width: 14px;
+
 }
 .rigth_side_D .overflow::-webkit-scrollbar-thumb{
     background-color: #2A2A2A;
@@ -747,6 +755,7 @@ main{
     border: none;
     color:#9E9E9E;
     font-size:20px;
+
 }
 .reproductor .rigth .content_r_rep .volume .cover_volume{
     width: 15px;
@@ -815,11 +824,34 @@ main{
 
 /*Tablet media*/
 @media screen and (max-width: 945px){
+
+    /*scroll en x en  las tarjetas*/
+    .tarjeta_block{
+        overflow-x: scroll;
+        max-width: 100%;
+        column-gap: 5px ;
+    }
+    .tarjeta_block .tarjeta_musica_block{
+       min-width: 150px;   
+    }
+    .tarjeta_block::-webkit-scrollbar{
+        background-color:transparent;  
+    }
+    /*scroll en x en  las tarjetas*/
     .left_side_D{
         display: none;
     }
     .reproductor{
         display: none;
+    }
+    .buenas_tardes{ /*altura de tarjetas debajo del saludo*/
+        height: 26%;
+    }
+    .title_cont{/*altura titulo de cada seccion de tarjetas*/
+        height: 8%;
+    }
+    .static_nav{
+        height: 9%;
     }
     .left_side_tablet{
         box-sizing: border-box;
@@ -1014,5 +1046,169 @@ main{
     /* END Modificicacion de porcentajes para altura en tablet*/
 }
  
+@media screen and (max-width: 579px){
+    .left_side_tablet{
+        display: none;
+    }
+    .rigth_side_D{
+        width: 100%;
+        padding: 0px 0px 0px 0px;
+    }
+    /*oculta la barra de desplazamiento*/
+    .rigth_side_D .overflow::-webkit-scrollbar{
+        background-color: transparent;
+    }
+    .rigth_side_D .overflow::-webkit-scrollbar-thumb{
+        background-color: transparent;
+    }
+    .buenas_tardes .content_dere{
+       justify-content: center;
+       column-gap: 5px;
+    }
+    .buenas_tardes .content_dere .tarjeta_musica{
+        height: 32%;
+        min-width: 200px;
+    }
+    .tarjeta_block .tarjeta_musica_block{
+        min-width: 135px;   
+    }
+
+    /*reproductor phone*/
+    .rep_phone{
+        display: block;
+        position: relative;
+        top: -120px;
+        width: 100%;
+        height: 60px;
+        background-color:#2e0701;
+    }
+    .rep_phone .content_rep_phone{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .rep_phone .content_rep_phone .sup_phone{
+        display: flex;
+        justify-content: space-between;
+        height: 90%;
+    }
+    .rep_phone .content_rep_phone .sup_phone .izq_sup_phone{
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+        padding-left: 5px;
+    }
+    .rep_phone .content_rep_phone .sup_phone .izq_sup_phone .img_rep_phone{
+        display: flex;
+        height: 90%;
+    }
+    .rep_phone .content_rep_phone .sup_phone .izq_sup_phone img{
+        width: 45px;
+        height: 100%;
+    }
+    .rep_phone .content_rep_phone .sup_phone .der_sup_phone{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding-right: 10px;
+    }
+    .rep_phone .content_rep_phone .sup_phone .der_sup_phone .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 48
+    }
+    .rep_phone .content_rep_phone .sup_phone .der_sup_phone button{
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+    }
+    .rep_phone .content_rep_phone .inf_phone{
+        display: flex;
+        align-items: flex-end;
+        height: 10%;
+    }
+    .rep_phone .content_rep_phone .inf_phone .time_rep_phone{
+        width: 100%;
+        height: 3px;
+        background-color:#696969;
+    }
+    .rep_phone .content_rep_phone .inf_phone .cover_time_rep_phone{
+        width: 30%;
+        height: 3px;
+        background-color: #ffffff;
+    }
+
+    /*reproductor phone*/
+
+    /*barra navegacion phone*/
+    .navegacion_phone{
+        display: block;
+        position: relative;
+        top: -120px;
+        width: 100%;
+        height: 50px;
+        background-color: #000000e7;  
+    }
+    .navegacion_phone{
+        display: flex;
+    }
+    .navegacion_phone .nav_phone{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navegacion_phone .nav_phone button{
+        background-color:transparent;
+        border: none;
+        color: white;
+        font-size: 2.3rem;
+        height: 100%;
+    }
+    .navegacion_phone .nav_phone .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 48
+    }
+    .navegacion_phone .nav_phone .btn_home_p .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 1, 'wght' 200, 'GRAD' 200, 'opsz' 48
+    }
+    /*barra navegacion phone*/
+    
+}
+    @media screen and (max-width: 480px){
+    .buenas_tardes .content_dere .tarjeta_musica{
+        height: 30%;
+        min-width: 180px;
+    }
+}
+    @media screen and (max-width: 436px){/*hasta 375*/
+    .buenas_tardes .content_dere .tarjeta_musica{
+        min-width: 150px;
+        height: 31%;
+    }
+    .buenas_tardes .content_dere .tarjeta_musica p{
+        font-size: 0.7rem;
+    }
+    .buenas_tardes .content_dere{
+        column-gap: 6px;   
+     }
+    .tarjeta_block .tarjeta_musica_block{
+        min-width: 105px;   
+     }
+
+    .static_nav{
+        height: 6%;
+    }
+    .b_tardes{
+        height: 9%;
+    }
+    .title_cont{
+        height: 8%;
+    }
+}
 /* END Tablet media*/
 /*responsive */
