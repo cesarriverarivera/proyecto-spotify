@@ -20,6 +20,16 @@ var hora =new Date().getHours();
     }else
         saludo.innerHTML = "Buenas noches"
 /* codigo para mostrar buenos dias ,buenas tardes o buenas noches */
+/* codigo para mostrar buenos dias ,buenas tardes o buenas noches para moviles */
+var saludo  = document.getElementById("saludo_phone");
+var hora =new Date().getHours();
+    if (hora >=6 && hora < 12){
+        saludo.innerHTML = "Buenos dias"
+    }else if (hora >=12 && hora <19){
+        saludo.innerHTML = "Buenas tardes"
+    }else
+        saludo.innerHTML = "Buenas noches"
+/* codigo para mostrar buenos dias ,buenas tardes o buenas noches para moviles */
 
 /*codigo for each para recorrer cada elemento dentro de tarjeta_musica*/ 
 document.querySelectorAll(".tarjeta_musica").forEach(item => {
