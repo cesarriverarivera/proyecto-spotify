@@ -848,12 +848,14 @@ main{
     .reproductor{
         display: none;
     }
-    .static_nav{
+    /*.static_nav{
         display: none;
     }
+    
     .b_tardes{
         display: none;
     }
+    */
     /*estilos navegacion para moviles y tablets*/
     .nav_sup_phone{
         display: block;
@@ -1125,12 +1127,12 @@ main{
     .left_side_tablet{
         display: none;
     }
-    .static_nav{
+    /*.static_nav{
         display: none;
     }
     .b_tardes{
         display: none;
-    }
+    }*/
     .all_d{
         padding-right: 10px;
         padding-left: 10px;
