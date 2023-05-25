@@ -32,6 +32,7 @@ var hora =new Date().getHours();
 /* codigo para mostrar buenos dias ,buenas tardes o buenas noches para moviles */
 
 /*codigo for each para recorrer cada elemento dentro de tarjeta_musica*/ 
+
 document.querySelectorAll(".tarjeta_musica").forEach(item => {
     item.addEventListener('mouseover', () => document.getElementById('all_de').style.backgroundImage = "linear-gradient(#4a496b 2%,#121212 60%)")
     item.addEventListener('mouseover', () => document.getElementById('stat_nav').style.backgroundColor = "transparent")
@@ -40,7 +41,7 @@ document.querySelectorAll(".tarjeta_musica").forEach(item => {
     item.addEventListener('mouseout',() => document.getElementById('all_de').style.backgroundImage = "linear-gradient(#490b02 10%,#121212 40%)")
     item.addEventListener('mouseout',() => document.getElementById('stat_nav').style.backgroundColor = "#490b02")
     
-  })    
+  })
   /*codigo for each para recorrer cada elemento dentro de tarjeta_musica */
  
 /* codigo para barra inferior al hacer hover sobre la miniatura de portada de cancion se muestre boton para expansion*/
