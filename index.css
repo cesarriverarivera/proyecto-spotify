@@ -409,7 +409,7 @@ body{
     border-radius: 5px;
 }
 .buenas_tardes .content_dere .tarjeta_musica .title_p{
-    width: 85%;
+    width: 45%;
 }
 .buenas_tardes .content_dere .tarjeta_musica p{
     /*usar webkit box y line clamp sirve para decirle que maximo sean dos lineas luego con ellipsis le pone los puntos suspensivos*/
@@ -422,6 +422,7 @@ body{
     color: white; 
 }
 .buenas_tardes .content_dere .tarjeta_musica button{
+    
     display: none;
     width: 45px;
     height: 45px;
@@ -919,6 +920,9 @@ body{
         height: 26%;
         margin-top: 10px;
     }
+    .buenas_tardes .content_dere .tarjeta_musica .title_p{
+        width: 85%;
+    }
     .title_cont{/*altura titulo de cada seccion de tarjetas*/
         height: 8%;
     }
@@ -1111,6 +1115,9 @@ body{
     }
     .buenas_tardes .content_dere .tarjeta_musica img{
         width: 70%;
+    }
+    .buenas_tardes .content_dere .tarjeta_musica .title_p{
+        width: 85%;
     }
     .title_cont{
         height: 8%;
