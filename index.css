@@ -266,12 +266,14 @@ body{
     height: 85svh;
     padding:10px 15px 0px 0px;
 }
-.rigth_side_D .overflow{
-    background-image: linear-gradient(#490b02 2%,#121212 60%);
+.rigth_side_D .overflow{   
     overflow-y: auto;
     width: 100%;
     height: 100%;
     border-radius: 8px;
+}
+#all_de{
+    background-image: linear-gradient(#490b02 2%,#121212 60%);
 }
 .all_d{
     width: 100%; 

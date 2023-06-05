@@ -33,16 +33,19 @@ var hora =new Date().getHours();
 
 /*codigo for each para recorrer cada elemento dentro de tarjeta_musica*/ 
 
-document.querySelectorAll(".tarjeta_musica").forEach(item => {
-    item.addEventListener('mouseover', () => document.getElementById('all_de').style.backgroundImage = "linear-gradient(#4a496b 2%,#121212 60%)")
-    item.addEventListener('mouseover', () => document.getElementById('stat_nav').style.backgroundColor = "transparent")
-
-
-    item.addEventListener('mouseout',() => document.getElementById('all_de').style.backgroundImage = "linear-gradient(#490b02 10%,#121212 40%)")
-    item.addEventListener('mouseout',() => document.getElementById('stat_nav').style.backgroundColor = "#490b02")
-    
-  })
-  /*codigo for each para recorrer cada elemento dentro de tarjeta_musica */
+    if (window.innerWidth > 945) {
+        document.querySelectorAll(".tarjeta_musica").forEach(item => {
+            item.addEventListener('mouseover', () => document.getElementById('all_de').style.backgroundImage = "linear-gradient(#4a496b 2%,#121212 60%)")
+            item.addEventListener('mouseover', () => document.getElementById('stat_nav').style.backgroundColor = "transparent")
+        
+        
+            item.addEventListener('mouseout',() => document.getElementById('all_de').style.backgroundImage = "linear-gradient(#490b02 10%,#121212 40%)")
+            item.addEventListener('mouseout',() => document.getElementById('stat_nav').style.backgroundColor = "#490b02") 
+        })
+    }else
+        document.getElementById('all_de').style.backgroundImage = "linear-gradient(#000000 10%,#000000 40%)";
+     
+/*codigo for each para recorrer cada elemento dentro de tarjeta_musica */
  
 /* codigo para barra inferior al hacer hover sobre la miniatura de portada de cancion se muestre boton para expansion*/
 let imghover = document.getElementById("img_small")
